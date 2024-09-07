@@ -9,7 +9,7 @@ Welcome to the ECC GitHub repository! This project aims to improve the implement
   author = {Elaine Cecília Gatto},
   title = {ECC: A python implementation for Ensemble of Classifier Chains},  
   year = {2024},  
-  doi = {},
+  doi = {10.13140/RG.2.2.36166.28482},
   url = {https://github.com/cissagatto/ECC}
 }
 ```
