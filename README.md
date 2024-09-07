@@ -2,19 +2,30 @@
 
 Welcome to the ECC GitHub repository! This project aims to improve the implementation of the Ensemble of Classifier Chains method for multi-label classification problems. Below, you'll find instructions on how to get started with ECC and an example of how to use it.
 
+## How to Cite
+
+```plaintext
+@misc{ECC2024,
+  author = {Elaine Cecília Gatto},
+  title = {ECC: A python implementation for Ensemble of Classifier Chains},  
+  year = {2024},  
+  doi = {},
+  url = {https://github.com/cissagatto/ECC}
+}
+```
+
 ## Overview
 
 ECC is a method that extends the Classifier Chains approach by incorporating an ensemble of base classifiers. This implementation leverages `scikit-learn` for the base model and provides additional functionalities for efficient training, prediction, and model evaluation.
 
 ## Installation
 
-To get started with ECC, you need to install the required packages. You can do this using `pip`:
+To start with `ECC` you must install the required packages. You can do this using `pip`:
 
 ```bash
 pip install numpy pandas scikit-learn
 ```
 
-Make sure you have the ECC module installed. If it's unavailable on PyPI, you may need to clone this repository and install it manually.
 
 ## Usage
 
@@ -69,15 +80,19 @@ print(f"\nTotal training time: {total_time:.2f} seconds")
 model_sizes = ecc.model_size()
 print(f"Model sizes for each chain (in bytes): {model_sizes}")
 
-# 10. Display the first 5 binary predictions
+# 10. Check the size of the models for each chain in bytes
+model_sizes_2 = ecc.model_size_joblib()
+print(f"Model sizes for each chain: {model_sizes_2}")
+
+# 11. Display the first 5 binary predictions
 print("First 5 binary predictions:")
 print(binary_preds[:5])
 
-# 11. Display the first 5 cardinality-based predictions
+# 12. Display the first 5 cardinality-based predictions
 print("First 5 cardinality-based predictions:")
 print(cardinality_preds[:5])
 
-# 12. Display the first 5 predicted probabilities
+# 13. Display the first 5 predicted probabilities
 print("First 5 predicted probabilities:")
 print(probas[:5])
 ```
